@@ -28,6 +28,72 @@ public class NodeFactory : INodeFactory
         return node;
     }
 
+    internal static INode CreateChip(double x, double y, double width, double height, string? label, double pinSize = 10)
+    {
+        var node = new NodeViewModel
+        {
+            X = x,
+            Y = y,
+            Width = width,
+            Height = height,
+            Pins = new ObservableCollection<IPin>(),
+            Content = new RectangleViewModel { Label = label }
+        };
+
+        for (int i = 0; i != 10; i++)
+        {
+            node.AddPin(0, i * 15, pinSize * 2, pinSize, PinAlignment.Left, $"P{i}");
+
+        }
+        //node.AddPin(width, height / 2, pinSize, pinSize, PinAlignment.Right, "R");
+        //node.AddPin(width / 2, 0, pinSize, pinSize, PinAlignment.Top, "T");
+        //node.AddPin(width / 2, height, pinSize, pinSize, PinAlignment.Bottom, "B");
+
+        return node;
+    }
+
+    internal static INode CreateVia(double x, double y, double width, double height, string? label, double pinSize = 10)
+    {
+        var node = new NodeViewModel
+        {
+            X = x,
+            Y = y,
+            Width = width,
+            Height = height,
+            Pins = new ObservableCollection<IPin>(),
+            Content = new RectangleViewModel { Label = label }
+        };
+
+        node.AddPin(0, 0, pinSize, pinSize, PinAlignment.Right, "V1");
+
+        //node.AddPin(width, height / 2, pinSize, pinSize, PinAlignment.Right, "R");
+        //node.AddPin(width / 2, 0, pinSize, pinSize, PinAlignment.Top, "T");
+        //node.AddPin(width / 2, height, pinSize, pinSize, PinAlignment.Bottom, "B");
+
+        return node;
+    }
+
+    internal static INode CreatePin(double x, double y, double width, double height, string? label, double pinSize = 10)
+    {
+        var node = new NodeViewModel
+        {
+            X = x,
+            Y = y,
+            Width = width,
+            Height = height,
+            Pins = new ObservableCollection<IPin>(),
+            Content = new RectangleViewModel { Label = label }
+        };
+
+        node.AddPin(10, 10, pinSize, pinSize, PinAlignment.Right, "P1");
+
+        //node.AddPin(width, height / 2, pinSize, pinSize, PinAlignment.Right, "R");
+        //node.AddPin(width / 2, 0, pinSize, pinSize, PinAlignment.Top, "T");
+        //node.AddPin(width / 2, height, pinSize, pinSize, PinAlignment.Bottom, "B");
+
+        return node;
+    }
+
     internal static INode CreateEllipse(double x, double y, double width, double height, string? label, double pinSize = 10)
     {
         var node = new NodeViewModel
@@ -44,7 +110,7 @@ public class NodeFactory : INodeFactory
         node.AddPin(width, height / 2, pinSize, pinSize, PinAlignment.Right, "R");
         node.AddPin(width / 2, 0, pinSize, pinSize, PinAlignment.Top, "T");
         node.AddPin(width / 2, height, pinSize, pinSize, PinAlignment.Bottom, "B");
-            
+
         return node;
     }
 
@@ -63,7 +129,7 @@ public class NodeFactory : INodeFactory
 
         node.AddPin(0, height / 2, pinSize, pinSize, PinAlignment.Left, "IN");
         node.AddPin(width, height / 2, pinSize, pinSize, PinAlignment.Right, "OUT");
-  
+
         return node;
     }
 
@@ -98,7 +164,7 @@ public class NodeFactory : INodeFactory
             Width = width,
             Height = height,
             Pins = new ObservableCollection<IPin>(),
-            Content = new OrGateViewModel { Label = "≥", Count = count}
+            Content = new OrGateViewModel { Label = "≥", Count = count }
         };
 
         node.AddPin(0, height / 2, pinSize, pinSize, PinAlignment.Left, "L");
@@ -112,7 +178,7 @@ public class NodeFactory : INodeFactory
     internal static IConnector CreateConnector(IPin? start, IPin? end)
     {
         return new ConnectorViewModel
-        { 
+        {
             Start = start,
             End = end
         };

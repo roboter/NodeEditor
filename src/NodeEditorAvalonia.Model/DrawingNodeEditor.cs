@@ -86,15 +86,7 @@ public sealed class DrawingNodeEditor
         return true;
     }
 
-    public bool CanSelectConnectors()
-    {
-        if (_connector is { })
-        {
-            return false;
-        }
-
-        return true;
-    }
+    public bool CanSelectConnectors() => _connector is not { };
 
     public bool CanConnectPin(IPin pin)
     {
@@ -102,7 +94,7 @@ public sealed class DrawingNodeEditor
         {
             if (IsPinConnected(pin))
             {
-                return false;
+                //return false;
             }
         }
 

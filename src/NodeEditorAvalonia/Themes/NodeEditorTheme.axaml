@@ -20,7 +20,8 @@
         </ResourceDictionary>
       </ResourceDictionary.ThemeDictionaries>
       <ResourceDictionary.MergedDictionaries>
-        <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Pin.axaml" />
+        <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/EllipsePin.axaml" />
+        <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/RectanglePin.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Pins.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Node.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Nodes.axaml" />

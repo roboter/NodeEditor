@@ -46,25 +46,6 @@
         </ItemsControl>
       </ControlTemplate>
     </Setter>
- 
-    <!--
-    <Style Selector="^/template/ ItemsControl#PART_PinsItemsControl > :is(ContentPresenter)">
-      <Setter Property="(i:Interaction.Behaviors)">
-        <i:BehaviorCollectionTemplate>
-          <i:BehaviorCollection>
-            <behaviors:PinPressedBehavior />
-          </i:BehaviorCollection>
-        </i:BehaviorCollectionTemplate>
-      </Setter>
-    </Style>
-    -->
-
-    <!--
-    <Style Selector="^/template/ ItemsControl#PART_PinsItemsControl">
-      <Setter Property="IsVisible" Value="False" />
-    </Style>
-    -->
-
   </ControlTheme>
 
 </ResourceDictionary>
