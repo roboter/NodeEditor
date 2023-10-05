@@ -10,7 +10,7 @@ public interface IDrawingNode : INode
 {
     public event SelectionChangedEventHandler? SelectionChanged;
     IList<INode>? Nodes { get; set; }
-    IList<IConnector>? Connectors { get; set; }
+    IList<ICommonConnector>? Connectors { get; set; }
     ISet<INode>? GetSelectedNodes();
     bool EnableMultiplePinConnections { get; set; }
     bool EnableSnap { get; set; }
@@ -29,9 +29,9 @@ public interface IDrawingNode : INode
     void NotifySelectionChanged();
     void NotifyDeselectedNodes();
     void NotifyDeselectedConnectors();
-    void  SetSelectedNodes(ISet<INode>? nodes);
-    ISet<IConnector>? GetSelectedConnectors();
-    void  SetSelectedConnectors(ISet<IConnector>? connectors);
+    void SetSelectedNodes(ISet<INode>? nodes);
+    ISet<ICommonConnector>? GetSelectedConnectors();
+    void SetSelectedConnectors(ISet<ICommonConnector>? connectors);
     INodeSerializer? GetSerializer();
     void SetSerializer(INodeSerializer? serializer);
     public T? Clone<T>(T source);

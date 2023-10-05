@@ -10,7 +10,7 @@ public class DrawingNodeFactory : IDrawingNodeFactory
 
     public IPin CreatePin() => new PinViewModel();
 
-    public IConnector CreateConnector() => new ConnectorViewModel();
+    public ICommonConnector CreateConnector() => new OffsetConnectorViewModel();
 
     public IList<T> CreateList<T>() => new ObservableCollection<T>();
 }

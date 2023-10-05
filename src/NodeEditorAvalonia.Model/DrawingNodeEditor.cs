@@ -7,7 +7,7 @@ public sealed class DrawingNodeEditor
 {
     private readonly IDrawingNode _node;
     private readonly IDrawingNodeFactory _factory;
-    private IConnector? _connector;
+    private ICommonConnector? _connector;
     private string? _clipboard;
     private double _pressedX = double.NaN;
     private double _pressedY = double.NaN;
@@ -15,7 +15,7 @@ public sealed class DrawingNodeEditor
     private class Clipboard
     {
         public ISet<INode>? SelectedNodes { get; set; }
-        public ISet<IConnector>? SelectedConnectors { get; set; }
+        public ISet<ICommonConnector>? SelectedConnectors { get; set; }
     }
 
     public DrawingNodeEditor(IDrawingNode node, IDrawingNodeFactory factory)
@@ -172,7 +172,7 @@ public sealed class DrawingNodeEditor
 
             if (showWhenMoving)
             {
-                _node.Connectors ??= _factory.CreateList<IConnector>();
+                _node.Connectors ??= _factory.CreateList<ICommonConnector>();
                 _node.Connectors.Add(connector);
             }
 
@@ -189,7 +189,7 @@ public sealed class DrawingNodeEditor
 
                 if (!showWhenMoving)
                 {
-                    _node.Connectors ??= _factory.CreateList<IConnector>();
+                    _node.Connectors ??= _factory.CreateList<ICommonConnector>();
                     _node.Connectors.Add(_connector);            
                 }
 
@@ -319,7 +319,7 @@ public sealed class DrawingNodeEditor
         _node.SetSelectedConnectors(null);
 
         var selectedNodes = new HashSet<INode>();
-        var selectedConnectors = new HashSet<IConnector>();
+        var selectedConnectors = new HashSet<ICommonConnector>();
 
         if (clipboard.SelectedNodes is { Count: > 0 })
         {
@@ -493,7 +493,7 @@ public sealed class DrawingNodeEditor
 
             _node.SetSelectedConnectors(null);
 
-            var selectedConnectors = new HashSet<IConnector>();
+            var selectedConnectors = new HashSet<ICommonConnector>();
             var connectors = _node.Connectors;
 
             foreach (var connector in connectors)

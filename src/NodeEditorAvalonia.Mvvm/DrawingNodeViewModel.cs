@@ -11,10 +11,10 @@ public partial class DrawingNodeViewModel : NodeViewModel, IDrawingNode
 {
     private readonly DrawingNodeEditor _editor;
     private ISet<INode>? _selectedNodes;
-    private ISet<IConnector>? _selectedConnectors;
+    private ISet<ICommonConnector>? _selectedConnectors;
     private INodeSerializer? _serializer;
     [ObservableProperty] private IList<INode>? _nodes;
-    [ObservableProperty] private IList<IConnector>? _connectors;
+    [ObservableProperty] private IList<ICommonConnector>? _connectors;
     [ObservableProperty] private bool _enableMultiplePinConnections;
     [ObservableProperty] private bool _enableSnap;
     [ObservableProperty] private double _snapX;
@@ -88,9 +88,9 @@ public partial class DrawingNodeViewModel : NodeViewModel, IDrawingNode
 
     public void SetSelectedNodes(ISet<INode>? nodes) => _selectedNodes = nodes;
 
-    public ISet<IConnector>? GetSelectedConnectors() => _selectedConnectors;
+    public ISet<ICommonConnector>? GetSelectedConnectors() => _selectedConnectors;
 
-    public void SetSelectedConnectors(ISet<IConnector>? connectors) => _selectedConnectors = connectors;
+    public void SetSelectedConnectors(ISet<ICommonConnector>? connectors) => _selectedConnectors = connectors;
 
     public INodeSerializer? GetSerializer() => _serializer;
 

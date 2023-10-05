@@ -25,7 +25,7 @@
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Pins.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Node.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Nodes.axaml" />
-        <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Connector.axaml" />
+        <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/OffsetConnector.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/Connectors.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/DrawingNode.axaml" />
         <ResourceInclude Source="avares://NodeEditorAvalonia/Themes/Controls/DrawingNodeProperties.axaml" />

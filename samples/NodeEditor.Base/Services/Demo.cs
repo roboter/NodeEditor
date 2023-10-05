@@ -15,30 +15,30 @@ internal static class Demo
             Width = 900,
             Height = 600,
             Nodes = new ObservableCollection<INode>(),
-            Connectors = new ObservableCollection<IConnector>(),
+            Connectors = new ObservableCollection<ICommonConnector>(),
             EnableMultiplePinConnections = false,
             EnableSnap = true,
-            SnapX = 15.0,
-            SnapY = 15.0,
+            SnapX = 25.4,
+            SnapY = 25.4,
             EnableGrid = true,
-            GridCellWidth = 15.0,
-            GridCellHeight = 15.0,
+            GridCellWidth = 25.4,
+            GridCellHeight = 25.4,
         };
 
-        //var rectangle0 = NodeFactory.CreateRectangle(30, 30, 60, 60, "rect0");
-        //rectangle0.Parent = drawing;
-        //drawing.Nodes.Add(rectangle0);
+        var rectangle0 = NodeFactory.CreateRectangle(30, 30, 60, 60, "rect0");
+        rectangle0.Parent = drawing;
+        drawing.Nodes.Add(rectangle0);
 
-        //var rectangle1 = NodeFactory.CreateRectangle(240, 30, 60, 60, "rect1");
-        //rectangle1.Parent = drawing;
-        //drawing.Nodes.Add(rectangle1);
+        var rectangle1 = NodeFactory.CreateRectangle(240, 30, 60, 60, "rect1");
+        rectangle1.Parent = drawing;
+        drawing.Nodes.Add(rectangle1);
 
-        //if (rectangle0.Pins?[1] is { } && rectangle1.Pins?[0] is { })
-        //{
-        //    var connector0 = NodeFactory.CreateConnector(rectangle0.Pins[1], rectangle1.Pins[0]);
-        //    connector0.Parent = drawing;
-        //    drawing.Connectors.Add(connector0);
-        //}
+        if (rectangle0.Pins?[1] is { } && rectangle1.Pins?[0] is { })
+        {
+            var connector0 = NodeFactory.CreateConnector(rectangle0.Pins[1], rectangle1.Pins[0], 20);
+            connector0.Parent = drawing;
+            drawing.Connectors.Add(connector0);
+        }
 
         //var rectangle2 = NodeFactory.CreateRectangle(30, 150, 60, 60, "rect2");
         //rectangle2.Parent = drawing;
@@ -86,15 +86,14 @@ internal static class Demo
         //}
 
 
-        var rectangle0 = NodeFactory.CreateChip(12, 12, 60, 60, "STM32");
-        rectangle0.Parent = drawing;
-        drawing.Nodes.Add(rectangle0);
-
+        var rectangleStm = NodeFactory.CreateChip(12, 12, 60, 60, "STM32");
+        rectangleStm.Parent = drawing;
+        drawing.Nodes.Add(rectangleStm);
 
         // TODO: How to move VIA?
-        //var via1 = NodeFactory.CreateVia(120, 12, 60, 60, "v1");
-        //via1.Parent = drawing;
-        //drawing.Nodes.Add(via1);
+        var via1 = NodeFactory.CreateVia(120, 12, 60, 60, "v1");
+        via1.Parent = drawing;
+        drawing.Nodes.Add(via1);
 
         var pin1 = NodeFactory.CreatePin(120, 120, 20, 20, "p1");
         pin1.Parent = drawing;

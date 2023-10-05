@@ -4,9 +4,9 @@ namespace NodeEditor.Model;
 
 public sealed class ConnectorCreatedEventArgs : EventArgs
 {
-    public IConnector? Connector { get; }
+    public ICommonConnector? Connector { get; }
 
-    public ConnectorCreatedEventArgs(IConnector? connector)
+    public ConnectorCreatedEventArgs(ICommonConnector? connector)
     {
         Connector = connector;
     }
@@ -14,9 +14,9 @@ public sealed class ConnectorCreatedEventArgs : EventArgs
 
 public sealed class ConnectorRemovedEventArgs : EventArgs
 {
-    public IConnector? Connector { get; }
+    public ICommonConnector? Connector { get; }
 
-    public ConnectorRemovedEventArgs(IConnector? connector)
+    public ConnectorRemovedEventArgs(ICommonConnector? connector)
     {
         Connector = connector;
     }
@@ -24,9 +24,9 @@ public sealed class ConnectorRemovedEventArgs : EventArgs
 
 public sealed class ConnectorSelectedEventArgs : EventArgs
 {
-    public IConnector? Connector { get; }
+    public ICommonConnector? Connector { get; }
 
-    public ConnectorSelectedEventArgs(IConnector? connector)
+    public ConnectorSelectedEventArgs(ICommonConnector? connector)
     {
         Connector = connector;
     }
@@ -34,9 +34,9 @@ public sealed class ConnectorSelectedEventArgs : EventArgs
 
 public sealed class ConnectorDeselectedEventArgs : EventArgs
 {
-    public IConnector? Connector { get; }
+    public ICommonConnector? Connector { get; }
 
-    public ConnectorDeselectedEventArgs(IConnector? connector)
+    public ConnectorDeselectedEventArgs(ICommonConnector? connector)
     {
         Connector = connector;
     }
@@ -44,9 +44,9 @@ public sealed class ConnectorDeselectedEventArgs : EventArgs
 
 public sealed class ConnectorStartChangedEventArgs : EventArgs
 {
-    public IConnector? Connector { get; }
+    public ICommonConnector? Connector { get; }
 
-    public ConnectorStartChangedEventArgs(IConnector? connector)
+    public ConnectorStartChangedEventArgs(ICommonConnector? connector)
     {
         Connector = connector;
     }
@@ -54,22 +54,24 @@ public sealed class ConnectorStartChangedEventArgs : EventArgs
 
 public sealed class ConnectorEndChangedEventArgs : EventArgs
 {
-    public IConnector? Connector { get; }
+    public ICommonConnector? Connector { get; }
 
-    public ConnectorEndChangedEventArgs(IConnector? connector)
+    public ConnectorEndChangedEventArgs(ICommonConnector? connector)
     {
         Connector = connector;
     }
 }
 
-public interface IConnector
+public interface ICommonConnector
 {
     string? Name { get; set; }
     IDrawingNode? Parent { get; set; }
     ConnectorOrientation Orientation { get; set; }
     IPin? Start { get; set; }
     IPin? End { get; set; }
+
     double Offset { get; set; }
+
     bool CanSelect();
     bool CanRemove();
     event EventHandler<ConnectorCreatedEventArgs>? Created;
@@ -84,4 +86,11 @@ public interface IConnector
     void OnDeselected();
     void OnStartChanged();
     void OnEndChanged();
+}
+
+
+public interface IBezierConnector : ICommonConnector
+{
+    IPin? StartControl { get; set; }
+    IPin? EndControl { get; set; }
 }

@@ -6,8 +6,12 @@ using ReactiveMarbles.PropertyChanged;
 
 namespace NodeEditor.Mvvm;
 
+
+
+
+
 [ObservableObject]
-public partial class ConnectorViewModel : IConnector
+public partial class OffsetConnectorViewModel : ICommonConnector
 {
     [ObservableProperty] private string? _name;
     [ObservableProperty] private IDrawingNode? _parent;
@@ -28,7 +32,7 @@ public partial class ConnectorViewModel : IConnector
 
     public event EventHandler<ConnectorEndChangedEventArgs>? EndChanged;
 
-    public ConnectorViewModel() => ObservePins();
+    public OffsetConnectorViewModel() => ObservePins();
 
     private void ObservePins()
     {

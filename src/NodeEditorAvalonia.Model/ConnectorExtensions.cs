@@ -3,7 +3,7 @@
 public static class ConnectorExtensions
 {
     public static void GetControlPoints(
-        this IConnector connector,
+        this ICommonConnector connector,
         ConnectorOrientation orientation, 
         double offset, 
         PinAlignment p1A, 

@@ -5,6 +5,6 @@ namespace NodeEditor.Model;
 public interface IDrawingNodeFactory
 {
     IPin CreatePin();
-    IConnector CreateConnector();
+    ICommonConnector CreateConnector();
     public IList<T> CreateList<T>();
 }

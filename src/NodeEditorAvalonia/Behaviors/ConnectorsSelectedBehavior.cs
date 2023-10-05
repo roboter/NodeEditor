@@ -88,7 +88,7 @@ public class ConnectorsSelectedBehavior : Behavior<ItemsControl>
     {
         foreach (var control in itemsControl.GetRealizedContainers())
         {
-            if (control is not { DataContext: IConnector connector } containerControl)
+            if (control is not { DataContext: ICommonConnector connector } containerControl)
             {
                 continue;
             }
@@ -122,7 +122,7 @@ public class ConnectorsSelectedBehavior : Behavior<ItemsControl>
     {
         foreach (var control in itemsControl.GetRealizedContainers())
         {
-            if (control is not { DataContext: IConnector } containerControl)
+            if (control is not { DataContext: ICommonConnector } containerControl)
             {
                 continue;
             }

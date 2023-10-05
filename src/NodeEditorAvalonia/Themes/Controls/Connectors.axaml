@@ -24,8 +24,8 @@
             </ItemsPanelTemplate>
           </ItemsControl.ItemsPanel>
           <ItemsControl.ItemTemplate>
-            <DataTemplate DataType="m:IConnector">
-              <controls:Connector Name="PART_Connector"
+            <DataTemplate DataType="m:ICommonConnector">
+              <controls:OffsetConnector Name="PART_Connector"
                                   StartPoint="{Binding Start, Converter={x:Static converters:PinToPointConverter.Instance}}" 
                                   EndPoint="{Binding End, Converter={x:Static converters:PinToPointConverter.Instance}}"
                                   Offset="{Binding Offset}"/>

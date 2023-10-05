@@ -36,7 +36,7 @@ internal static class HitTestHelper
         return points;
     }
 
-    public static bool HitTestConnector(IConnector connector, Rect rect)
+    public static bool HitTestConnector(ICommonConnector connector, Rect rect)
     {
         var start = connector.Start;
         var end = connector.End;
@@ -93,7 +93,7 @@ internal static class HitTestHelper
         return false;
     }
 
-    public static Rect GetConnectorBounds(IConnector connector)
+    public static Rect GetConnectorBounds(ICommonConnector connector)
     {
         var start = connector.Start;
         var end = connector.End;
@@ -181,7 +181,7 @@ internal static class HitTestHelper
         drawingNode.NotifySelectionChanged();
 
         var selectedNodes = new HashSet<INode>();
-        var selectedConnectors = new HashSet<IConnector>();
+        var selectedConnectors = new HashSet<ICommonConnector>();
 
         if (drawingNode.CanSelectNodes())
         {

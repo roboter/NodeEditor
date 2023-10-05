@@ -5,7 +5,7 @@
                     xmlns:controls="clr-namespace:NodeEditor.Controls"
                     x:CompileBindings="True">
 
-  <ControlTheme x:Key="{x:Type controls:Connector}" TargetType="controls:Connector">
+  <ControlTheme x:Key="{x:Type controls:OffsetConnector}" TargetType="controls:OffsetConnector">
 
     <Setter Property="Stroke" Value="{DynamicResource ConnectorBackgroundBrush}" />
     <Setter Property="StrokeThickness" Value="2" />
@@ -13,7 +13,7 @@
 
     <Setter Property="ContextFlyout">
       <Setter.Value>
-        <Flyout x:DataType="m:IConnector">
+        <Flyout x:DataType="m:ICommonConnector">
           <DockPanel>
             <DockPanel DockPanel.Dock="Top">
               <Label Content="Orientation:" DockPanel.Dock="Top" />
@@ -37,11 +37,11 @@
       </Setter.Value>
     </Setter>
 
-    <!--
+
     <Style Selector="^:selected">
       <Setter Property="Stroke" Value="Blue" />
     </Style>
-    -->
+
 
   </ControlTheme>
 

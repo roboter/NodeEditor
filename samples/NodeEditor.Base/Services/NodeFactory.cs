@@ -175,12 +175,23 @@ public class NodeFactory : INodeFactory
         return node;
     }
 
-    internal static IConnector CreateConnector(IPin? start, IPin? end)
+    internal static ICommonConnector CreateConnector(IPin? start, IPin? end, double offset)
     {
-        return new ConnectorViewModel
+        return new OffsetConnectorViewModel
         {
             Start = start,
-            End = end
+            End = end,
+            Offset = offset
+        };
+    }
+
+    internal static ICommonConnector CreateBezierConnector(IPin? start, IPin? end)
+    {
+        return new OffsetConnectorViewModel
+        {
+            Start = start,
+            End = end,
+            
         };
     }
 
@@ -194,7 +205,7 @@ public class NodeFactory : INodeFactory
             Width = 900,
             Height = 600,
             Nodes = new ObservableCollection<INode>(),
-            Connectors = new ObservableCollection<IConnector>(),
+            Connectors = new ObservableCollection<ICommonConnector>(),
             EnableMultiplePinConnections = false,
             EnableSnap = true,
             SnapX = 15.0,
