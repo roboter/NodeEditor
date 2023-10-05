@@ -28,7 +28,7 @@ public class NodeFactory : INodeFactory
         return node;
     }
 
-    internal static INode CreateChip(double x, double y, double width, double height, string? label, double pinSize = 10)
+    internal static INode CreateChip(double x, double y, double width, double height, string? label, double pinWidth, double pinHight)
     {
         var node = new NodeViewModel
         {
@@ -39,15 +39,27 @@ public class NodeFactory : INodeFactory
             Pins = new ObservableCollection<IPin>(),
             Content = new RectangleViewModel { Label = label }
         };
-
-        for (int i = 0; i != 10; i++)
+        var start = 12.5;
+        var pinsOnSide = 16;
+        var nextPin = 5;
+        for (int i = 0; i != pinsOnSide; i++)
         {
-            node.AddPin(0, i * 15, pinSize * 2, pinSize, PinAlignment.Left, $"P{i}");
-
+            node.AddPin(0, start + i * nextPin, pinHight, pinWidth, PinAlignment.Left, $"P{i}");
         }
-        //node.AddPin(width, height / 2, pinSize, pinSize, PinAlignment.Right, "R");
-        //node.AddPin(width / 2, 0, pinSize, pinSize, PinAlignment.Top, "T");
-        //node.AddPin(width / 2, height, pinSize, pinSize, PinAlignment.Bottom, "B");
+        for (int i = 0; i != pinsOnSide; i++)
+        {
+            node.AddPin(start+i * nextPin, width, pinWidth, pinHight, PinAlignment.Bottom, $"P{pinsOnSide *1 + i}");
+        }
+
+        for (int i = 0; i != pinsOnSide; i++)
+        {
+            node.AddPin(width, start + i * nextPin, pinHight, pinWidth, PinAlignment.Right, $"P{pinsOnSide * 2 + i}");
+        }
+
+        for (int i = 0; i != pinsOnSide; i++)
+        {
+            node.AddPin(start + i * nextPin, 0, pinWidth, pinHight, PinAlignment.Top, $"P{pinsOnSide * 3 + i}");
+        }
 
         return node;
     }
@@ -73,7 +85,7 @@ public class NodeFactory : INodeFactory
         return node;
     }
 
-    internal static INode CreatePin(double x, double y, double width, double height, string? label, double pinSize = 10)
+    internal static INode CreatePin(double x, double y, double width, double height, string? label = "", double pinSize = 10)
     {
         var node = new NodeViewModel
         {
@@ -82,10 +94,10 @@ public class NodeFactory : INodeFactory
             Width = width,
             Height = height,
             Pins = new ObservableCollection<IPin>(),
-            Content = new RectangleViewModel { Label = label }
+            Content = new RoundedRectangleViewModel { Label = label }
         };
 
-        node.AddPin(10, 10, pinSize, pinSize, PinAlignment.Right, "P1");
+        node.AddPin(25.4 / 2  , 25.4 / 2 , pinSize, pinSize, PinAlignment.Right, label);
 
         //node.AddPin(width, height / 2, pinSize, pinSize, PinAlignment.Right, "R");
         //node.AddPin(width / 2, 0, pinSize, pinSize, PinAlignment.Top, "T");
@@ -191,7 +203,7 @@ public class NodeFactory : INodeFactory
         {
             Start = start,
             End = end,
-            
+
         };
     }
 

@@ -31,4 +31,10 @@
     <ProjectReference Include="..\..\src\NodeEditorAvalonia\NodeEditorAvalonia.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Views\Nodes\RoundedRectangleView.axaml.cs">
+      <DependentUpon>RoundedRectangleView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,428 @@
+{
+  "$id": "1",
+  "$type": "NodeEditor.Mvvm.DrawingNodeViewModel, NodeEditorAvalonia.Mvvm",
+  "Nodes": [
+    {
+      "$id": "2",
+      "$type": "NodeEditor.Mvvm.NodeViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "X": 113.60000000000005,
+      "Y": 139.00000000000003,
+      "Width": 60.0,
+      "Height": 60.0,
+      "Content": {
+        "$id": "3",
+        "$type": "NodeEditorDemo.ViewModels.Nodes.RectangleViewModel, NodeEditor.Base",
+        "Label": "STM32"
+      },
+      "Pins": [
+        {
+          "$id": "4",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P0",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 0.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "5",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P1",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 15.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "6",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P2",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 30.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "7",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P3",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 45.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "8",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P4",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 60.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "9",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P5",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 75.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "10",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P6",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 90.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "11",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P7",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 105.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "12",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P8",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 120.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        },
+        {
+          "$id": "13",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "P9",
+          "Parent": {
+            "$ref": "2"
+          },
+          "X": 0.0,
+          "Y": 135.0,
+          "Width": 20.0,
+          "Height": 10.0,
+          "Alignment": 1
+        }
+      ]
+    },
+    {
+      "$id": "14",
+      "$type": "NodeEditor.Mvvm.NodeViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "X": 12.70000000000001,
+      "Y": 114.30000000000001,
+      "Width": 25.4,
+      "Height": 25.4,
+      "Content": {
+        "$id": "15",
+        "$type": "NodeEditorDemo.ViewModels.Nodes.RoundedRectangleViewModel, NodeEditor.Base",
+        "Label": "p1"
+      },
+      "Pins": [
+        {
+          "$id": "16",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "p1",
+          "Parent": {
+            "$ref": "14"
+          },
+          "X": 12.7,
+          "Y": 12.7,
+          "Width": 10.0,
+          "Height": 10.0,
+          "Alignment": 2
+        }
+      ]
+    },
+    {
+      "$id": "17",
+      "$type": "NodeEditor.Mvvm.NodeViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "X": 12.70000000000001,
+      "Y": 114.30000000000001,
+      "Width": 25.4,
+      "Height": 25.4,
+      "Content": {
+        "$id": "18",
+        "$type": "NodeEditorDemo.ViewModels.Nodes.RoundedRectangleViewModel, NodeEditor.Base",
+        "Label": "p1"
+      },
+      "Pins": [
+        {
+          "$id": "19",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "p1",
+          "Parent": {
+            "$ref": "17"
+          },
+          "X": 12.7,
+          "Y": 12.7,
+          "Width": 10.0,
+          "Height": 10.0,
+          "Alignment": 2
+        }
+      ]
+    },
+    {
+      "$id": "20",
+      "$type": "NodeEditor.Mvvm.NodeViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "X": 12.70000000000001,
+      "Y": 139.69999999999996,
+      "Width": 25.4,
+      "Height": 25.4,
+      "Content": {
+        "$id": "21",
+        "$type": "NodeEditorDemo.ViewModels.Nodes.RoundedRectangleViewModel, NodeEditor.Base",
+        "Label": "p1"
+      },
+      "Pins": [
+        {
+          "$id": "22",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "p1",
+          "Parent": {
+            "$ref": "20"
+          },
+          "X": 12.7,
+          "Y": 12.7,
+          "Width": 10.0,
+          "Height": 10.0,
+          "Alignment": 2
+        }
+      ]
+    },
+    {
+      "$id": "23",
+      "$type": "NodeEditor.Mvvm.NodeViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "X": 12.70000000000001,
+      "Y": 165.09999999999997,
+      "Width": 25.4,
+      "Height": 25.4,
+      "Content": {
+        "$id": "24",
+        "$type": "NodeEditorDemo.ViewModels.Nodes.RoundedRectangleViewModel, NodeEditor.Base",
+        "Label": "p1"
+      },
+      "Pins": [
+        {
+          "$id": "25",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "p1",
+          "Parent": {
+            "$ref": "23"
+          },
+          "X": 12.7,
+          "Y": 12.7,
+          "Width": 10.0,
+          "Height": 10.0,
+          "Alignment": 2
+        }
+      ]
+    },
+    {
+      "$id": "26",
+      "$type": "NodeEditor.Mvvm.NodeViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "X": 12.70000000000001,
+      "Y": 190.49999999999997,
+      "Width": 25.4,
+      "Height": 25.4,
+      "Content": {
+        "$id": "27",
+        "$type": "NodeEditorDemo.ViewModels.Nodes.RoundedRectangleViewModel, NodeEditor.Base",
+        "Label": "p1"
+      },
+      "Pins": [
+        {
+          "$id": "28",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "p1",
+          "Parent": {
+            "$ref": "26"
+          },
+          "X": 12.7,
+          "Y": 12.7,
+          "Width": 10.0,
+          "Height": 10.0,
+          "Alignment": 2
+        }
+      ]
+    },
+    {
+      "$id": "29",
+      "$type": "NodeEditor.Mvvm.NodeViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "X": 12.70000000000001,
+      "Y": 215.89999999999998,
+      "Width": 25.4,
+      "Height": 25.4,
+      "Content": {
+        "$id": "30",
+        "$type": "NodeEditorDemo.ViewModels.Nodes.RoundedRectangleViewModel, NodeEditor.Base",
+        "Label": "p1"
+      },
+      "Pins": [
+        {
+          "$id": "31",
+          "$type": "NodeEditor.Mvvm.PinViewModel, NodeEditorAvalonia.Mvvm",
+          "Name": "p1",
+          "Parent": {
+            "$ref": "29"
+          },
+          "X": 12.7,
+          "Y": 12.7,
+          "Width": 10.0,
+          "Height": 10.0,
+          "Alignment": 2
+        }
+      ]
+    }
+  ],
+  "Connectors": [
+    {
+      "$id": "32",
+      "$type": "NodeEditor.Mvvm.OffsetConnectorViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "Orientation": 0,
+      "Start": {
+        "$ref": "16"
+      },
+      "End": {
+        "$ref": "4"
+      },
+      "Offset": 50.0
+    },
+    {
+      "$id": "33",
+      "$type": "NodeEditor.Mvvm.OffsetConnectorViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "Orientation": 0,
+      "Start": {
+        "$ref": "22"
+      },
+      "End": {
+        "$ref": "5"
+      },
+      "Offset": 50.0
+    },
+    {
+      "$id": "34",
+      "$type": "NodeEditor.Mvvm.OffsetConnectorViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "Orientation": 0,
+      "Start": {
+        "$ref": "25"
+      },
+      "End": {
+        "$ref": "6"
+      },
+      "Offset": 50.0
+    },
+    {
+      "$id": "35",
+      "$type": "NodeEditor.Mvvm.OffsetConnectorViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "Orientation": 0,
+      "Start": {
+        "$ref": "28"
+      },
+      "End": {
+        "$ref": "7"
+      },
+      "Offset": 50.0
+    },
+    {
+      "$id": "36",
+      "$type": "NodeEditor.Mvvm.OffsetConnectorViewModel, NodeEditorAvalonia.Mvvm",
+      "Parent": {
+        "$ref": "1"
+      },
+      "Orientation": 0,
+      "Start": {
+        "$ref": "31"
+      },
+      "End": {
+        "$ref": "8"
+      },
+      "Offset": 50.0
+    }
+  ],
+  "EnableMultiplePinConnections": false,
+  "EnableSnap": true,
+  "SnapX": 25.4,
+  "SnapY": 25.4,
+  "EnableGrid": true,
+  "GridCellWidth": 25.4,
+  "GridCellHeight": 25.4,
+  "X": 0.0,
+  "Y": 0.0,
+  "Width": 900.0,
+  "Height": 600.0
+}

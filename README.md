@@ -1,18 +1,11 @@
-# NodeEditor
+# NodePCB
 
-[![Build Status](https://dev.azure.com/wieslawsoltes/GitHub/_apis/build/status/wieslawsoltes.NodeEditor?branchName=main)](https://dev.azure.com/wieslawsoltes/GitHub/_build/latest?definitionId=104&branchName=main)
-[![CI](https://github.com/wieslawsoltes/NodeEditor/actions/workflows/build.yml/badge.svg)](https://github.com/wieslawsoltes/NodeEditor/actions/workflows/build.yml)
-
-[![NuGet](https://img.shields.io/nuget/v/NodeEditorAvalonia.svg)](https://www.nuget.org/packages/NodeEditorAvalonia)
-[![NuGet](https://img.shields.io/nuget/dt/NodeEditorAvalonia.svg)](https://www.nuget.org/packages/NodeEditorAvalonia)
-
-A node editor control for Avalonia.
 
 # About
 
 The node editor is an Avalonia control for editing and rendering nodes and connectors. Node contents can be defined from xaml. Node controls, connectors and pins can be retemplated from xaml or used with the provided default theme. The contents of the nodes are rendered based on provided view models. The default implementation of the view models is done using ReactiveUI, users can create their own view models based on core model interfaces. The node contents are resolved using the provided object type by view locator.
 
-![image](https://user-images.githubusercontent.com/2297442/201498448-cd76b29f-ea87-4f0b-9dd5-071c9e49b7c2.png)
+![image](/images/CurvePCB.gif)
 
 ## Building NodeEditor
 

@@ -6,8 +6,10 @@ namespace NodeEditorDemo.Services;
 
 internal static class Demo
 {
+    private const double Inch = 2.54;
     public static IDrawingNode CreateDemoDrawing()
     {
+
         var drawing = new DrawingNodeViewModel
         {
             X = 0,
@@ -18,11 +20,11 @@ internal static class Demo
             Connectors = new ObservableCollection<ICommonConnector>(),
             EnableMultiplePinConnections = false,
             EnableSnap = true,
-            SnapX = 25.4,
-            SnapY = 25.4,
+            SnapX = Inch * 10,
+            SnapY = Inch * 10,
             EnableGrid = true,
-            GridCellWidth = 25.4,
-            GridCellHeight = 25.4,
+            GridCellWidth = Inch * 10,
+            GridCellHeight = Inch * 10,
         };
 
         var rectangle0 = NodeFactory.CreateRectangle(30, 30, 60, 60, "rect0");
@@ -85,8 +87,14 @@ internal static class Demo
         //    drawing.Connectors.Add(connector1);
         //}
 
+        var start = 25;
+        var pinsOnSide = 16;
+        var nextPin = 15;
+        var pinWidth = 0.35 * 10;
+        var pinHeight = 1.35 * 10;
 
-        var rectangleStm = NodeFactory.CreateChip(12, 12, 60, 60, "STM32");
+        var side = 9.85 * 10;// pinsOnSide * nextPin + pinWidth + start * 2;
+        var rectangleStm = NodeFactory.CreateChip(12, 12, side, side, "LQFP64", pinWidth, pinHeight);
         rectangleStm.Parent = drawing;
         drawing.Nodes.Add(rectangleStm);
 
@@ -95,7 +103,7 @@ internal static class Demo
         via1.Parent = drawing;
         drawing.Nodes.Add(via1);
 
-        var pin1 = NodeFactory.CreatePin(120, 120, 20, 20, "p1");
+        var pin1 = NodeFactory.CreatePin(Inch * 10 - Inch * 5, Inch * 10 - Inch * 5, Inch * 10, Inch * 10, "p1");
         pin1.Parent = drawing;
         drawing.Nodes.Add(pin1);
 
